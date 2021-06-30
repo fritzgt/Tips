@@ -19,6 +19,7 @@
 @property (nonatomic) IBOutlet UISlider *percentageSlider;
 @property (nonatomic) IBOutlet UITableView *tableView;
 
+
 //Private Methods
 
 @end
