@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FGTTip : NSObject
 
 
-@property (nonatomic) NSString *name;
-@property (nonatomic) double total;
-@property (nonatomic) NSInteger splitCount;
-@property (nonatomic) double tipPercentage;
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) double total;
+@property (nonatomic, readonly) NSInteger splitCount;
+@property (nonatomic, readonly) double tipPercentage;
 
 
 @end
