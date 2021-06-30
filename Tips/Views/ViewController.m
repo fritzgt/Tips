@@ -6,10 +6,17 @@
 //
 
 #import "ViewController.h"
-
+#import "FGTModelController.h"
 
 //Declare any private methods or outlets in the private interface
 @interface ViewController ()
+
+//Private properties
+@property (nonatomic) double total;
+@property (nonatomic) int split;
+@property (nonatomic) double percentage;
+@property (nonatomic) double tip;
+@property (nonatomic) FGTModelController *tipController;
 
 //Outlets
 @property (nonatomic) IBOutlet UITextField *totalTextField;
