@@ -75,6 +75,9 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JYN-2y-Gaf">
                                                 <rect key="frame" x="288" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="updateSplit:" destination="BYZ-38-t0r" eventType="valueChanged" id="40H-Iv-ZHr"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -97,10 +100,16 @@
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pRr-I8-d2W">
                                         <rect key="frame" x="-2" y="262" width="386" height="31"/>
+                                        <connections>
+                                            <action selector="updatePercentage:" destination="BYZ-38-t0r" eventType="valueChanged" id="b2l-cG-jJY"/>
+                                        </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfB-Wn-7pg">
                                         <rect key="frame" x="161.5" y="314" width="59" height="30"/>
                                         <state key="normal" title="Save Tip"/>
+                                        <connections>
+                                            <action selector="saveTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qyd-De-1uX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

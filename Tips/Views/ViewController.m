@@ -15,7 +15,7 @@
 @property (nonatomic) double total;
 @property (nonatomic) int split;
 @property (nonatomic) double percentage;
-@property (nonatomic) double tip;
+@property (nonatomic) double calculatedTip;
 @property (nonatomic) FGTModelController *tipController;
 
 //Outlets
@@ -40,6 +40,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+#pragma mark -IBActions
+
+-(IBAction)updateSplit:(UIStepper *)sender
+{
+    self.split = round(sender.value);
+    [self calculatedTip];
+}
+
+-(IBAction)updatePercentage:(id)sender
+{
+    self.percentage = round(self.percentageSlider.value);
+    
+    [self calculatedTip];
+}
+
+-(IBAction)saveTip:(id)sender
+{
+    
+}
+
+#pragma mark -TableViewDataSource
+
 
 
 @end
