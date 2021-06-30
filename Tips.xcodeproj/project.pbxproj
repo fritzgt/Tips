@@ -14,6 +14,7 @@
 		04AA81FE268C63DE00124774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AA81FD268C63DE00124774 /* Assets.xcassets */; };
 		04AA8201268C63DE00124774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AA81FF268C63DE00124774 /* LaunchScreen.storyboard */; };
 		04AA8204268C63DE00124774 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA8203268C63DE00124774 /* main.m */; };
+		04AA8212268C646900124774 /* FGTTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA8211268C646900124774 /* FGTTip.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		04AA8200268C63DE00124774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04AA8202268C63DE00124774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04AA8203268C63DE00124774 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04AA8210268C646900124774 /* FGTTip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTTip.h; sourceTree = "<group>"; };
+		04AA8211268C646900124774 /* FGTTip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTTip.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				04AA81F0268C63DB00124774 /* Tips */,
+				04AA820B268C63F200124774 /* Resources */,
 				04AA81EF268C63DB00124774 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,19 +65,53 @@
 		04AA81F0268C63DB00124774 /* Tips */ = {
 			isa = PBXGroup;
 			children = (
-				04AA81F1268C63DB00124774 /* AppDelegate.h */,
-				04AA81F2268C63DB00124774 /* AppDelegate.m */,
-				04AA81F4268C63DB00124774 /* SceneDelegate.h */,
-				04AA81F5268C63DB00124774 /* SceneDelegate.m */,
-				04AA81F7268C63DB00124774 /* ViewController.h */,
-				04AA81F8268C63DB00124774 /* ViewController.m */,
-				04AA81FA268C63DB00124774 /* Main.storyboard */,
-				04AA81FD268C63DE00124774 /* Assets.xcassets */,
-				04AA81FF268C63DE00124774 /* LaunchScreen.storyboard */,
-				04AA8202268C63DE00124774 /* Info.plist */,
-				04AA8203268C63DE00124774 /* main.m */,
+				04AA820F268C644400124774 /* Model */,
+				04AA820C268C640F00124774 /* Views */,
+				04AA820E268C641F00124774 /* Sotryboards */,
 			);
 			path = Tips;
+			sourceTree = "<group>";
+		};
+		04AA820B268C63F200124774 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04AA81F1268C63DB00124774 /* AppDelegate.h */,
+				04AA81F2268C63DB00124774 /* AppDelegate.m */,
+				04AA81FD268C63DE00124774 /* Assets.xcassets */,
+				04AA8202268C63DE00124774 /* Info.plist */,
+				04AA8203268C63DE00124774 /* main.m */,
+				04AA81F4268C63DB00124774 /* SceneDelegate.h */,
+				04AA81F5268C63DB00124774 /* SceneDelegate.m */,
+			);
+			name = Resources;
+			path = Tips;
+			sourceTree = "<group>";
+		};
+		04AA820C268C640F00124774 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04AA81F7268C63DB00124774 /* ViewController.h */,
+				04AA81F8268C63DB00124774 /* ViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04AA820E268C641F00124774 /* Sotryboards */ = {
+			isa = PBXGroup;
+			children = (
+				04AA81FF268C63DE00124774 /* LaunchScreen.storyboard */,
+				04AA81FA268C63DB00124774 /* Main.storyboard */,
+			);
+			path = Sotryboards;
+			sourceTree = "<group>";
+		};
+		04AA820F268C644400124774 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04AA8210268C646900124774 /* FGTTip.h */,
+				04AA8211268C646900124774 /* FGTTip.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +140,7 @@
 		04AA81E6268C63DB00124774 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FGT;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					04AA81ED268C63DB00124774 = {
@@ -147,6 +186,7 @@
 			files = (
 				04AA81F9268C63DB00124774 /* ViewController.m in Sources */,
 				04AA81F3268C63DB00124774 /* AppDelegate.m in Sources */,
+				04AA8212268C646900124774 /* FGTTip.m in Sources */,
 				04AA8204268C63DE00124774 /* main.m in Sources */,
 				04AA81F6268C63DB00124774 /* SceneDelegate.m in Sources */,
 			);
