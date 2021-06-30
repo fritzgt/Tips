@@ -16,7 +16,6 @@
 
 @end
 
-
 #pragma mark - Implementation
 
 @implementation FGTModelController
