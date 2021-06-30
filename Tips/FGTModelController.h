@@ -16,6 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly) NSArray<FGTTip *> *tips;
 
+@property (nonatomic, readonly) NSUInteger tipCount;
+
+- (FGTTip *)tipAtIndex:(NSUInteger)index;
+
+-(void)addTip:(FGTTip *)aTip;
+
 @end
 
 NS_ASSUME_NONNULL_END
