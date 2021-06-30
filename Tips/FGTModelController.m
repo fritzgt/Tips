@@ -8,7 +8,8 @@
 #import "FGTModelController.h"
 #import "FGTTip.h"
 
-//This is like a private interface
+#pragma mark - Private interface
+
 @interface FGTModelController (){
     NSMutableArray *_internalTips;
 }
@@ -16,6 +17,7 @@
 @end
 
 
+#pragma mark - Implementation
 
 @implementation FGTModelController
 
@@ -24,13 +26,17 @@
     if (self = [super init]){
         _internalTips = [[NSMutableArray alloc] init];
         
+#ifdef DEBUG//This will prevent to compile test data unless is not debugging
         //add test data
         [self addTestData];
+#endif
+        
     }
     
     return  self;
 }
 
+#pragma mark - Convinience Accesors
 
 - (void) addTestData
 {
@@ -42,7 +48,6 @@
     //2. add it to the array of tips
     [_internalTips addObject: aTip];
 }
-
 
 //Method 1
 - (NSArray<FGTTip *> *)tips
