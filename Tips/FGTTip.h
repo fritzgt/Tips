@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) double tipPercentage;
 
 
+- (instancetype)initWithName:(NSString *)aName
+                       total:(double)aTotal
+                  splitCount:(NSInteger)aSplitCount tipPercentage:(double)aTipPercentage;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
