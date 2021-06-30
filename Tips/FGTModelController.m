@@ -38,4 +38,14 @@
     return _internalTips.count;
 }
 
+- (FGTTip *)tipAtIndex:(NSUInteger)index
+{
+    return [_internalTips objectAtIndex:index];
+}
+
+- (void)addTip:(FGTTip *)aTip
+{
+    [_internalTips addObject:aTip];
+}
+
 @end
