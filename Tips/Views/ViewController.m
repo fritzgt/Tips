@@ -13,6 +13,7 @@
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 //Private properties
+@property (nonatomic) double tip;
 @property (nonatomic) double total;
 @property (nonatomic) NSInteger split;
 @property (nonatomic) double percentage;
@@ -24,7 +25,7 @@
 @property (nonatomic) IBOutlet UILabel *splitLabel;
 @property (nonatomic) IBOutlet UILabel *tipLabel;
 @property (nonatomic) IBOutlet UILabel *percentageLabel;
-@property (nonatomic) IBOutlet UIStepper *splutStepper;
+@property (nonatomic) IBOutlet UIStepper *splitStepper;
 @property (nonatomic) IBOutlet UISlider *percentageSlider;
 @property (nonatomic) IBOutlet UITableView *tableView;
 
@@ -32,7 +33,7 @@
 //Private Methods
 - (void)calculateTip;
 - (void)updateViews;
-- (void)daveTipName: (NSString *)name;
+- (void)saveTipName: (NSString *)name;
 
 @end
 
@@ -55,14 +56,13 @@
 -(IBAction)updateSplit:(UIStepper *)sender
 {
     self.split = round(sender.value);
-    [self calculatedTip];
+    [self calculateTip];
 }
 
 -(IBAction)updatePercentage:(id)sender
 {
     self.percentage = round(self.percentageSlider.value);
-    
-    [self calculatedTip];
+    [self calculateTip];
 }
 
 -(IBAction)saveTip:(id)sender
@@ -75,17 +75,34 @@
 
 - (void)calculateTip
 {
+    self.percentage = round(self.percentageSlider.value);
+    self.total = self.totalTextField.text.doubleValue;
+    self.split = self.splitStepper.value;
     
+    self.tip = self.total * (self.percentage/100.) / self.split;
+    
+    [self updateViews];
 };
 
 - (void)updateViews
 {
+    self.splitStepper.value = self.split;
+    self.percentageSlider.value = self.percentage;
+    self.totalTextField.text = [NSString localizedStringWithFormat:@"$%.f", self.tip];
+    self.splitLabel.text = [NSString localizedStringWithFormat:@"%ld", (long)self.split];
+    
+    self.percentageLabel.text = [NSString localizedStringWithFormat:@"%0.0f%%", self.percentage];
+    
     
 };
 
-- (void)daveTipName: (NSString *)name
+- (void)saveTipName: (NSString *)name
 {
-    
+    [self.tipController addTip:[[FGTTip alloc] initWithName: name
+                                                      total:self.total
+                                                 splitCount:self.split
+                                              tipPercentage:self.percentage]];
+    [self.tableView reloadData];
 };
 
 

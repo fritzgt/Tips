@@ -103,8 +103,8 @@
 		04AA820E268C641F00124774 /* Sotryboards */ = {
 			isa = PBXGroup;
 			children = (
-				04AA81FF268C63DE00124774 /* LaunchScreen.storyboard */,
 				04AA81FA268C63DB00124774 /* Main.storyboard */,
+				04AA81FF268C63DE00124774 /* LaunchScreen.storyboard */,
 			);
 			path = Sotryboards;
 			sourceTree = "<group>";

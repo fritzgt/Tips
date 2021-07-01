@@ -84,13 +84,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T6g-md-k5P">
                                         <rect key="frame" x="0.0" y="219.5" width="382" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tip percentage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nav-NV-bex">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip percentage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nav-NV-bex">
                                                 <rect key="frame" x="0.0" y="0.0" width="125.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVs-Ek-1Qv">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVs-Ek-1Qv">
                                                 <rect key="frame" x="133.5" y="0.0" width="248.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -163,7 +163,7 @@
                         <outlet property="percentageLabel" destination="jVs-Ek-1Qv" id="AXl-eY-BAL"/>
                         <outlet property="percentageSlider" destination="pRr-I8-d2W" id="kfE-Bs-luA"/>
                         <outlet property="splitLabel" destination="PTc-fc-dvU" id="6fe-Xs-wGv"/>
-                        <outlet property="splutStepper" destination="JYN-2y-Gaf" id="cNR-nT-yi1"/>
+                        <outlet property="splitStepper" destination="JYN-2y-Gaf" id="ASp-IC-LCO"/>
                         <outlet property="tableView" destination="ymV-A6-e0v" id="8Yb-hy-HvQ"/>
                         <outlet property="tipLabel" destination="kQE-HS-wn4" id="z0I-De-ia5"/>
                         <outlet property="totalTextField" destination="Ylf-qM-mlk" id="d1Y-Z8-XIk"/>
