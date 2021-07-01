@@ -163,6 +163,7 @@
                         <outlet property="percentageLabel" destination="jVs-Ek-1Qv" id="AXl-eY-BAL"/>
                         <outlet property="percentageSlider" destination="pRr-I8-d2W" id="kfE-Bs-luA"/>
                         <outlet property="splitLabel" destination="PTc-fc-dvU" id="6fe-Xs-wGv"/>
+                        <outlet property="splutStepper" destination="JYN-2y-Gaf" id="cNR-nT-yi1"/>
                         <outlet property="tableView" destination="ymV-A6-e0v" id="8Yb-hy-HvQ"/>
                         <outlet property="tipLabel" destination="kQE-HS-wn4" id="z0I-De-ia5"/>
                         <outlet property="totalTextField" destination="Ylf-qM-mlk" id="d1Y-Z8-XIk"/>

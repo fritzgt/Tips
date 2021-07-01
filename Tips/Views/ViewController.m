@@ -7,13 +7,14 @@
 
 #import "ViewController.h"
 #import "FGTModelController.h"
+#import "FGTTip.h"
 
 //Declare any private methods or outlets in the private interface
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 //Private properties
 @property (nonatomic) double total;
-@property (nonatomic) int split;
+@property (nonatomic) NSInteger split;
 @property (nonatomic) double percentage;
 @property (nonatomic) double calculatedTip;
 @property (nonatomic) FGTModelController *tipController;
@@ -23,11 +24,15 @@
 @property (nonatomic) IBOutlet UILabel *splitLabel;
 @property (nonatomic) IBOutlet UILabel *tipLabel;
 @property (nonatomic) IBOutlet UILabel *percentageLabel;
+@property (nonatomic) IBOutlet UIStepper *splutStepper;
 @property (nonatomic) IBOutlet UISlider *percentageSlider;
 @property (nonatomic) IBOutlet UITableView *tableView;
 
 
 //Private Methods
+- (void)calculateTip;
+- (void)updateViews;
+- (void)daveTipName: (NSString *)name;
 
 @end
 
@@ -38,7 +43,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tipController = [[FGTModelController alloc] init];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;//[self.tableView setDataSource: self];
 }
 
 
@@ -59,11 +67,68 @@
 
 -(IBAction)saveTip:(id)sender
 {
-    
+//    [self showSaveTipAlert];
 }
+
+
+#pragma mark -Methods
+
+- (void)calculateTip
+{
+    
+};
+
+- (void)updateViews
+{
+    
+};
+
+- (void)daveTipName: (NSString *)name
+{
+    
+};
+
+
 
 #pragma mark -TableViewDataSource
 
+- (UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier: @"TipCell" forIndexPath: indexPath];
+    
+    FGTTip *tip = [self.tipController tipAtIndex: indexPath.row];
+    
+    cell.textLabel.text = tip.name;
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    
+    
+    return  self.tipController.tipCount;
+}
+
+#pragma mark -TableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    FGTTip *tip = [self.tipController tipAtIndex:indexPath.row];
+    
+    self.total = tip.total;
+    self.split = tip.splitCount;
+    self.percentage = tip.tipPercentage;
+    
+    [self updateViews];
+    [self calculatedTip];
+}
+
+#pragma mark -Alert helper
+
+-(void)showSaveTipalert
+{
+    
+}
 
 
 @end
