@@ -15,6 +15,7 @@
 		04AA8201268C63DE00124774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AA81FF268C63DE00124774 /* LaunchScreen.storyboard */; };
 		04AA8204268C63DE00124774 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA8203268C63DE00124774 /* main.m */; };
 		04AA8212268C646900124774 /* FGTTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA8211268C646900124774 /* FGTTip.m */; };
+		04AA8217268CA26600124774 /* FGTModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AA8216268CA26600124774 /* FGTModelController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		04AA8203268C63DE00124774 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04AA8210268C646900124774 /* FGTTip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTTip.h; sourceTree = "<group>"; };
 		04AA8211268C646900124774 /* FGTTip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTTip.m; sourceTree = "<group>"; };
+		04AA8215268CA26600124774 /* FGTModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTModelController.h; sourceTree = "<group>"; };
+		04AA8216268CA26600124774 /* FGTModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTModelController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				04AA820F268C644400124774 /* Model */,
+				04AA8219268CA27300124774 /* Model Controller */,
 				04AA820C268C640F00124774 /* Views */,
 				04AA820E268C641F00124774 /* Sotryboards */,
 			);
@@ -99,8 +103,8 @@
 		04AA820E268C641F00124774 /* Sotryboards */ = {
 			isa = PBXGroup;
 			children = (
-				04AA81FF268C63DE00124774 /* LaunchScreen.storyboard */,
 				04AA81FA268C63DB00124774 /* Main.storyboard */,
+				04AA81FF268C63DE00124774 /* LaunchScreen.storyboard */,
 			);
 			path = Sotryboards;
 			sourceTree = "<group>";
@@ -112,6 +116,15 @@
 				04AA8211268C646900124774 /* FGTTip.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		04AA8219268CA27300124774 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04AA8215268CA26600124774 /* FGTModelController.h */,
+				04AA8216268CA26600124774 /* FGTModelController.m */,
+			);
+			name = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +202,7 @@
 				04AA8212268C646900124774 /* FGTTip.m in Sources */,
 				04AA8204268C63DE00124774 /* main.m in Sources */,
 				04AA81F6268C63DB00124774 /* SceneDelegate.m in Sources */,
+				04AA8217268CA26600124774 /* FGTModelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
