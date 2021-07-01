@@ -67,7 +67,7 @@
 
 -(IBAction)saveTip:(id)sender
 {
-//    [self showSaveTipAlert];
+    [self showSaveTipAlert];
 }
 
 
@@ -88,7 +88,9 @@
 {
     self.splitStepper.value = self.split;
     self.percentageSlider.value = self.percentage;
-    self.totalTextField.text = [NSString localizedStringWithFormat:@"$%.f", self.tip];
+    self.totalTextField.text = [NSString localizedStringWithFormat:@"%.2f", self.total];
+    
+    self.tipLabel.text = [NSString localizedStringWithFormat:@"$%.2f", self.tip];
     self.splitLabel.text = [NSString localizedStringWithFormat:@"%ld", (long)self.split];
     
     self.percentageLabel.text = [NSString localizedStringWithFormat:@"%0.0f%%", self.percentage];
@@ -137,14 +139,27 @@
     self.percentage = tip.tipPercentage;
     
     [self updateViews];
-    [self calculatedTip];
+    [self calculateTip];
 }
 
 #pragma mark -Alert helper
 
--(void)showSaveTipalert
+-(void)showSaveTipAlert
 {
+    __block UITextField *alertTextField;
     
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Save Tip"
+                                                                   message:@"What name would you like to give to this tip."
+                                                            preferredStyle: UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self saveTipName:alertTextField.text];
+    }]];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        alertTextField = textField;
+    }];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 
